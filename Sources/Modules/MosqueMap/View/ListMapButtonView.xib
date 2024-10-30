@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListMapButtonView" customModule="Namaz" customModuleProvider="target">
+            <connections>
+                <outlet property="listMapButton" destination="1Oy-ew-QYK" id="i3l-ha-1Ke"/>
+                <outlet property="mapCenterButton" destination="bK0-Xc-b2k" id="NLB-j5-cSZ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ipC-ZA-JPB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qEr-UL-eYh">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Oy-ew-QYK" customClass="Button" customModule="Namaz" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="341" height="40"/>
+                            <color key="backgroundColor" name="white-base"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="c1m-BD-r6L"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bK0-Xc-b2k" customClass="Button" customModule="Namaz" customModuleProvider="target">
+                            <rect key="frame" x="353" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="3ha-ZV-MiE"/>
+                                <constraint firstAttribute="width" constant="40" id="XCg-D6-pJT"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ae2-X7-U3l"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="icon_map_center"/>
+                            <connections>
+                                <action selector="mapCenterButtonAction:" destination="-1" eventType="touchUpInside" id="gyV-i4-g7F"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qEr-UL-eYh" secondAttribute="bottom" id="Xhn-d2-udx"/>
+                <constraint firstAttribute="trailing" secondItem="qEr-UL-eYh" secondAttribute="trailing" id="YQs-ya-Hie"/>
+                <constraint firstItem="qEr-UL-eYh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bxj-fr-h6z"/>
+                <constraint firstItem="qEr-UL-eYh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qMe-ix-evd"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="67.938931297709928" y="-166.5492957746479"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="1Oy-ew-QYK">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="bK0-Xc-b2k">
+            <size key="intrinsicContentSize" width="123" height="126"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icon_map_center" width="123" height="126"/>
+        <namedColor name="white-base">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

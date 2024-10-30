@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MosqueListView" customModule="Namaz" customModuleProvider="target">
+            <connections>
+                <outlet property="mapButtonView" destination="NQh-Hs-Mw1" id="DSj-YA-HYF"/>
+                <outlet property="mosqueCollectionView" destination="a3d-U3-iEh" id="dtK-D8-ESD"/>
+                <outlet property="searchTextField" destination="fzn-jY-Ikx" id="1j2-Iq-i19"/>
+                <outlet property="view" destination="iN0-l3-epB" id="KS2-Nf-1J7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-jY-Ikx" customClass="TextField" customModule="Namaz" customModuleProvider="target">
+                    <rect key="frame" x="16" y="75" width="361" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Ptc-C6-KJm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-U3-iEh" customClass="CollectionView" customModule="Namaz" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="135" width="393" height="683"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQh-Hs-Mw1" customClass="ListMapButtonView" customModule="Namaz" customModuleProvider="target">
+                    <rect key="frame" x="51" y="762" width="290" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="vJ1-fd-tgj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fzn-jY-Ikx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="KBy-cH-7I4"/>
+                <constraint firstItem="a3d-U3-iEh" firstAttribute="top" secondItem="fzn-jY-Ikx" secondAttribute="bottom" constant="16" id="Q38-F9-6nQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a3d-U3-iEh" secondAttribute="trailing" id="bGl-bw-14N"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NQh-Hs-Mw1" secondAttribute="trailing" constant="16" id="hZm-Qt-QFC"/>
+                <constraint firstItem="a3d-U3-iEh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oz6-R1-6B8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NQh-Hs-Mw1" secondAttribute="bottom" constant="16" id="pSz-G4-EpO"/>
+                <constraint firstItem="fzn-jY-Ikx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="qI3-Q6-nIr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="a3d-U3-iEh" secondAttribute="bottom" id="wC2-Zy-sNd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fzn-jY-Ikx" secondAttribute="trailing" constant="16" id="wgV-09-bMx"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="68" y="20"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" rowHeight="97" id="KGk-i7-Jjw" customClass="CalendarCell" customModule="Namaz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVS-66-raS">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="75"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LG-oO-p8G">
+                                <rect key="frame" x="24" y="0.0" width="2" height="75"/>
+                                <color key="backgroundColor" name="primary-100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="IVr-QX-Y5e"/>
+                                    <constraint firstAttribute="height" constant="75" id="b2W-cF-NOX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4LG-oO-p8G" firstAttribute="centerX" secondItem="JVS-66-raS" secondAttribute="centerX" id="HLQ-Dg-ajT"/>
+                            <constraint firstItem="4LG-oO-p8G" firstAttribute="top" secondItem="JVS-66-raS" secondAttribute="top" id="Y7N-R0-K1Q"/>
+                            <constraint firstAttribute="width" constant="50" id="gMa-8m-lie"/>
+                            <constraint firstAttribute="bottom" secondItem="4LG-oO-p8G" secondAttribute="bottom" id="q0y-wO-9cB"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qjS-x9-Uar">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BaJ-CH-GWP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQw-2L-GIJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_calendar_date" translatesAutoresizingMaskIntoConstraints="NO" id="90U-mA-XF0">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="hF4-Da-PUo"/>
+                                                    <constraint firstAttribute="width" constant="50" id="rXe-5L-DuB"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yc-xW-uap" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="0.0" width="34" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" name="white-base"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="2Yc-xW-uap" firstAttribute="bottom" secondItem="90U-mA-XF0" secondAttribute="bottom" id="04M-uc-0rw"/>
+                                            <constraint firstItem="90U-mA-XF0" firstAttribute="leading" secondItem="YQw-2L-GIJ" secondAttribute="leading" id="0bI-QG-3mF"/>
+                                            <constraint firstAttribute="bottom" secondItem="90U-mA-XF0" secondAttribute="bottom" id="408-2j-A85"/>
+                                            <constraint firstItem="90U-mA-XF0" firstAttribute="top" secondItem="YQw-2L-GIJ" secondAttribute="top" id="7ce-zq-lr6"/>
+                                            <constraint firstItem="2Yc-xW-uap" firstAttribute="leading" secondItem="90U-mA-XF0" secondAttribute="leading" constant="8" id="m0F-Jo-BcF"/>
+                                            <constraint firstItem="2Yc-xW-uap" firstAttribute="top" secondItem="90U-mA-XF0" secondAttribute="top" id="pny-qa-scf"/>
+                                            <constraint firstAttribute="trailing" secondItem="90U-mA-XF0" secondAttribute="trailing" id="qNJ-fl-eS8"/>
+                                            <constraint firstItem="2Yc-xW-uap" firstAttribute="trailing" secondItem="90U-mA-XF0" secondAttribute="trailing" constant="-8" id="vL3-Ge-7il"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Gi-M1-hMI">
+                                        <rect key="frame" x="70" y="0.0" width="206" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teL-PJ-vON" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="206" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxN-cQ-Pva" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="25" width="206" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSs-gJ-LsT">
+                                        <rect key="frame" x="296" y="0.0" width="24" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpW-Rg-7DF" customClass="Button" customModule="Namaz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="13" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="2Sk-Kg-2au"/>
+                                                    <constraint firstAttribute="height" constant="24" id="CWw-0E-0d0"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icon_calendar_bell"/>
+                                                <connections>
+                                                    <action selector="bellButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jKY-cc-eDG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kpW-Rg-7DF" secondAttribute="trailing" id="8BM-KD-yTV"/>
+                                            <constraint firstItem="kpW-Rg-7DF" firstAttribute="leading" secondItem="dSs-gJ-LsT" secondAttribute="leading" id="QY5-gb-Y5S"/>
+                                            <constraint firstItem="kpW-Rg-7DF" firstAttribute="centerY" secondItem="dSs-gJ-LsT" secondAttribute="centerY" id="rdE-6l-lQV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="JVS-66-raS" secondAttribute="bottom" id="3Kz-lT-HnO"/>
+                    <constraint firstAttribute="trailing" secondItem="qjS-x9-Uar" secondAttribute="trailing" id="Fq0-hW-pNQ"/>
+                    <constraint firstItem="JVS-66-raS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Hdj-vK-qdX"/>
+                    <constraint firstItem="qjS-x9-Uar" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Hdw-eH-bdQ"/>
+                    <constraint firstItem="qjS-x9-Uar" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hTS-9W-zxe"/>
+                    <constraint firstItem="JVS-66-raS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vEV-NQ-Ka5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bellButton" destination="kpW-Rg-7DF" id="2qW-tT-d0f"/>
+                <outlet property="bellContainerView" destination="dSs-gJ-LsT" id="kF3-hZ-sAt"/>
+                <outlet property="dateLabel" destination="2Yc-xW-uap" id="Mh3-XE-t6J"/>
+                <outlet property="dayDateLabel" destination="nxN-cQ-Pva" id="LnC-vV-zOs"/>
+                <outlet property="dayNameLabel" destination="teL-PJ-vON" id="Cr3-VH-PXI"/>
+                <outlet property="lineContainerView" destination="JVS-66-raS" id="Bqx-Cd-Q04"/>
+            </connections>
+            <point key="canvasLocation" x="62.595419847328245" y="38.380281690140848"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="kpW-Rg-7DF">
+            <size key="intrinsicContentSize" width="24" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icon_calendar_bell" width="24" height="24"/>
+        <image name="icon_calendar_date" width="44" height="50"/>
+        <namedColor name="primary-100">
+            <color red="0.39215686274509803" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white-base">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

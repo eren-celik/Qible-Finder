@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationListView" customModule="Namaz" customModuleProvider="target">
+            <connections>
+                <outlet property="searchTextField" destination="1MX-dA-gkx" id="A2T-AB-JQt"/>
+                <outlet property="tableView" destination="HTq-0O-pwn" id="e4Z-Dn-R7E"/>
+                <outlet property="titleLabel" destination="Vlo-Bj-XbX" id="ZNe-ZU-laK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="677"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rr9-gF-Eva">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="677"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vlo-Bj-XbX" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="jGQ-xJ-sUH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1MX-dA-gkx" customClass="TextField" customModule="Namaz" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="38" width="393" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="dbm-83-Xyj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdR-lM-guj">
+                            <rect key="frame" x="0.0" y="90" width="393" height="587"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTq-0O-pwn" customClass="TableView" customModule="Namaz" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="587"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="HTq-0O-pwn" firstAttribute="top" secondItem="tdR-lM-guj" secondAttribute="top" id="M6V-QM-xEt"/>
+                                <constraint firstAttribute="trailing" secondItem="HTq-0O-pwn" secondAttribute="trailing" id="MAY-zx-4a3"/>
+                                <constraint firstAttribute="bottom" secondItem="HTq-0O-pwn" secondAttribute="bottom" id="bSb-YP-7zs"/>
+                                <constraint firstItem="HTq-0O-pwn" firstAttribute="leading" secondItem="tdR-lM-guj" secondAttribute="leading" id="zrv-dK-iQh"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Rr9-gF-Eva" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5KC-NC-vej"/>
+                <constraint firstItem="Rr9-gF-Eva" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YkX-uB-VjT"/>
+                <constraint firstAttribute="trailing" secondItem="Rr9-gF-Eva" secondAttribute="trailing" id="b7E-M1-WbM"/>
+                <constraint firstAttribute="bottom" secondItem="Rr9-gF-Eva" secondAttribute="bottom" id="hNq-RA-pcT"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="67.938931297709928" y="-41.901408450704224"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

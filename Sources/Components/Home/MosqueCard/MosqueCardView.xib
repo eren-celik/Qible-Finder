@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MosqueCardView" customModule="Namaz" customModuleProvider="target">
+            <connections>
+                <outlet property="allButton" destination="q4u-Em-XY9" id="iOp-Cp-80u"/>
+                <outlet property="bgView" destination="g8u-lp-gQY" id="vBQ-RN-e43"/>
+                <outlet property="mosqueLabel" destination="rYh-oh-3pe" id="6Hi-9c-krQ"/>
+                <outlet property="routeButton" destination="6Tv-86-ior" id="OHF-Dg-LC7"/>
+                <outlet property="titleLabelView" destination="nqb-eo-XVT" id="JBe-Wp-2Sf"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Nl8-C7-z4A"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqb-eo-XVT" customClass="TitleLabelView" customModule="Namaz" customModuleProvider="target">
+                    <rect key="frame" x="16" y="0.0" width="361" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="v2E-Pk-xpT"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8u-lp-gQY">
+                    <rect key="frame" x="16" y="40" width="361" height="120"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_mosque_card" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-gC-wT0">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="120"/>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="R6q-o1-iYA">
+                            <rect key="frame" x="12" y="12" width="337" height="96"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-oh-3pe" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="337" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TqJ-lM-X6y">
+                                    <rect key="frame" x="0.0" y="63" width="337" height="33"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tv-86-ior" customClass="Button" customModule="Namaz" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="33"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="33" id="efc-6U-40R"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4u-Em-XY9" customClass="Button" customModule="Namaz" customModuleProvider="target">
+                                            <rect key="frame" x="174.66666666666663" y="0.0" width="162.33333333333337" height="33"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="33" id="VqY-Ic-USU"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="R6q-o1-iYA" secondAttribute="bottom" constant="12" id="0Fh-Nq-wx5"/>
+                        <constraint firstAttribute="trailing" secondItem="R6q-o1-iYA" secondAttribute="trailing" constant="12" id="4bg-uD-D3x"/>
+                        <constraint firstItem="R6q-o1-iYA" firstAttribute="leading" secondItem="g8u-lp-gQY" secondAttribute="leading" constant="12" id="8xK-pM-ISL"/>
+                        <constraint firstItem="R6q-o1-iYA" firstAttribute="top" secondItem="g8u-lp-gQY" secondAttribute="top" constant="12" id="EWF-Ci-I7h"/>
+                        <constraint firstAttribute="height" constant="120" id="FmF-Sg-fEq"/>
+                        <constraint firstItem="Vdz-gC-wT0" firstAttribute="leading" secondItem="g8u-lp-gQY" secondAttribute="leading" id="YTg-C4-d6V"/>
+                        <constraint firstAttribute="trailing" secondItem="Vdz-gC-wT0" secondAttribute="trailing" id="r3X-ez-om7"/>
+                        <constraint firstItem="Vdz-gC-wT0" firstAttribute="top" secondItem="g8u-lp-gQY" secondAttribute="top" id="s1t-qv-OhJ"/>
+                        <constraint firstAttribute="bottom" secondItem="Vdz-gC-wT0" secondAttribute="bottom" id="yI1-jr-saI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="nqb-eo-XVT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="7Qi-mP-ver"/>
+                <constraint firstAttribute="trailing" secondItem="nqb-eo-XVT" secondAttribute="trailing" constant="16" id="Tzx-Cw-yLd"/>
+                <constraint firstAttribute="trailing" secondItem="g8u-lp-gQY" secondAttribute="trailing" constant="16" id="UlJ-V6-WG7"/>
+                <constraint firstItem="nqb-eo-XVT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZDs-J7-98z"/>
+                <constraint firstAttribute="bottom" secondItem="g8u-lp-gQY" secondAttribute="bottom" id="e0r-6f-Jxt"/>
+                <constraint firstItem="g8u-lp-gQY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="u9K-zV-0Ez"/>
+                <constraint firstItem="g8u-lp-gQY" firstAttribute="top" secondItem="nqb-eo-XVT" secondAttribute="bottom" id="uTW-sR-2q6"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="67.938931297709928" y="-228.87323943661974"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="6Tv-86-ior">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="q4u-Em-XY9">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="bg_mosque_card" width="361" height="120"/>
+    </resources>
+</document>

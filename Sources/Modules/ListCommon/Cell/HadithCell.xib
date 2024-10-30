@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" rowHeight="433" id="KGk-i7-Jjw" customClass="HadithCell" customModule="Namaz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="433"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="433"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jcs-XS-tg5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="417"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjP-Yf-hxi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="243.33333333333334"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR5-mg-brR" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="12" width="296" height="231.33333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="VR5-mg-brR" firstAttribute="top" secondItem="IjP-Yf-hxi" secondAttribute="top" constant="12" id="0fm-PG-6qq"/>
+                                    <constraint firstItem="VR5-mg-brR" firstAttribute="leading" secondItem="IjP-Yf-hxi" secondAttribute="leading" constant="12" id="64c-Aw-2x7"/>
+                                    <constraint firstAttribute="bottom" secondItem="VR5-mg-brR" secondAttribute="bottom" id="694-PT-dkq"/>
+                                    <constraint firstAttribute="trailing" secondItem="VR5-mg-brR" secondAttribute="trailing" constant="12" id="RxL-HJ-oh7"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAn-mc-anM">
+                                <rect key="frame" x="0.0" y="255.33333333333334" width="320" height="95.6666666666666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-6L-Fi1" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="0.0" width="296" height="95.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="jzY-6L-Fi1" firstAttribute="top" secondItem="XAn-mc-anM" secondAttribute="top" id="PIF-QA-VkB"/>
+                                    <constraint firstItem="jzY-6L-Fi1" firstAttribute="leading" secondItem="XAn-mc-anM" secondAttribute="leading" constant="12" id="Ta0-FV-o4K"/>
+                                    <constraint firstAttribute="trailing" secondItem="jzY-6L-Fi1" secondAttribute="trailing" constant="12" id="h5z-4t-zDg"/>
+                                    <constraint firstAttribute="bottom" secondItem="jzY-6L-Fi1" secondAttribute="bottom" id="j7N-vg-nEF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7O-7h-gs1">
+                                <rect key="frame" x="0.0" y="363" width="320" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDv-s8-Hml" customClass="Button" customModule="Namaz" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="0.0" width="296" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="dLY-K6-wzr"/>
+                                        </constraints>
+                                        <color key="tintColor" name="white-base"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="icon_share"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hDv-s8-Hml" secondAttribute="bottom" constant="12" id="PQS-MV-K4s"/>
+                                    <constraint firstAttribute="trailing" secondItem="hDv-s8-Hml" secondAttribute="trailing" constant="12" id="QZ9-8Z-4dB"/>
+                                    <constraint firstItem="hDv-s8-Hml" firstAttribute="leading" secondItem="B7O-7h-gs1" secondAttribute="leading" constant="12" id="aba-Kr-xl7"/>
+                                    <constraint firstItem="hDv-s8-Hml" firstAttribute="top" secondItem="B7O-7h-gs1" secondAttribute="top" id="gGO-wr-T67"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="jcs-XS-tg5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="I96-my-cu8"/>
+                    <constraint firstAttribute="trailing" secondItem="jcs-XS-tg5" secondAttribute="trailing" id="QXo-z1-ZxT"/>
+                    <constraint firstItem="jcs-XS-tg5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aVL-1L-isT"/>
+                    <constraint firstAttribute="bottom" secondItem="jcs-XS-tg5" secondAttribute="bottom" constant="16" id="ljc-Ha-1jZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="contentLabel" destination="VR5-mg-brR" id="0us-J1-r3T"/>
+                <outlet property="referanceLabel" destination="jzY-6L-Fi1" id="61u-Dq-Wds"/>
+                <outlet property="shareButton" destination="hDv-s8-Hml" id="vBd-4y-cbV"/>
+            </connections>
+            <point key="canvasLocation" x="102.29007633587786" y="157.3943661971831"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="hDv-s8-Hml">
+            <size key="intrinsicContentSize" width="18" height="22"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icon_share" width="18" height="18"/>
+        <namedColor name="white-base">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
