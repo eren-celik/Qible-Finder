@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarCardView" customModule="Namaz" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="GQ7-Mf-XSy" id="6uD-JV-O5s"/>
+                <outlet property="titleLabelView" destination="t7l-hH-IIS" id="kx4-ac-sr8"/>
+                <outlet property="view" destination="ta4-Uo-Ke0" id="PNJ-U6-Uwu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ta4-Uo-Ke0">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="295"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7l-hH-IIS" customClass="TitleLabelView" customModule="Namaz" customModuleProvider="target">
+                    <rect key="frame" x="16" y="0.0" width="361" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="zQr-Mh-j8v"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-fM-tT3">
+                    <rect key="frame" x="12" y="40" width="369" height="255"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQ7-Mf-XSy" customClass="TableView" customModule="Namaz" customModuleProvider="target">
+                            <rect key="frame" x="12" y="12" width="345" height="243"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="white-base"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="GQ7-Mf-XSy" secondAttribute="bottom" id="Gc2-6R-Lfa"/>
+                        <constraint firstAttribute="trailing" secondItem="GQ7-Mf-XSy" secondAttribute="trailing" constant="12" id="dN3-jL-IHf"/>
+                        <constraint firstItem="GQ7-Mf-XSy" firstAttribute="top" secondItem="bUe-fM-tT3" secondAttribute="top" constant="12" id="ib8-re-uPT"/>
+                        <constraint firstItem="GQ7-Mf-XSy" firstAttribute="leading" secondItem="bUe-fM-tT3" secondAttribute="leading" constant="12" id="x6P-9x-Sq1"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bUe-fM-tT3" secondAttribute="bottom" id="4BO-yN-ows"/>
+                <constraint firstItem="bUe-fM-tT3" firstAttribute="top" secondItem="t7l-hH-IIS" secondAttribute="bottom" id="6d0-yH-GnF"/>
+                <constraint firstAttribute="trailing" secondItem="bUe-fM-tT3" secondAttribute="trailing" constant="12" id="CgV-zB-LD4"/>
+                <constraint firstItem="t7l-hH-IIS" firstAttribute="leading" secondItem="ta4-Uo-Ke0" secondAttribute="leading" constant="16" id="JeA-HD-uZB"/>
+                <constraint firstAttribute="trailing" secondItem="t7l-hH-IIS" secondAttribute="trailing" constant="16" id="aUf-jw-7lb"/>
+                <constraint firstItem="bUe-fM-tT3" firstAttribute="leading" secondItem="ta4-Uo-Ke0" secondAttribute="leading" constant="12" id="lvP-ag-PUr"/>
+                <constraint firstItem="t7l-hH-IIS" firstAttribute="top" secondItem="ta4-Uo-Ke0" secondAttribute="top" id="tWF-Vb-yyf"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="52.671755725190835" y="-176.40845070422537"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="white-base">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

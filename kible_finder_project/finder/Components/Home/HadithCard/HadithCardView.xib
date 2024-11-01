@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HadithCardView" customModule="Namaz" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="xIs-He-fGu" id="QSi-sb-glt"/>
+                <outlet property="titleLabelView" destination="9zL-wo-EDo" id="sZf-Ll-r54"/>
+                <outlet property="view" destination="fi4-kd-HqH" id="JoV-sT-rbi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="fi4-kd-HqH">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="215"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zL-wo-EDo" customClass="TitleLabelView" customModule="Namaz" customModuleProvider="target">
+                    <rect key="frame" x="16" y="0.0" width="361" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Blr-BJ-ruO"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIs-He-fGu" customClass="CollectionView" customModule="Namaz" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="40" width="393" height="144"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="144" id="IVa-g5-QXJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xIs-He-fGu" secondAttribute="bottom" id="2YX-Y5-X1w"/>
+                <constraint firstItem="9zL-wo-EDo" firstAttribute="top" secondItem="fi4-kd-HqH" secondAttribute="top" id="GFY-uV-mJ7"/>
+                <constraint firstAttribute="trailing" secondItem="9zL-wo-EDo" secondAttribute="trailing" constant="16" id="Gr7-7T-EpM"/>
+                <constraint firstItem="xIs-He-fGu" firstAttribute="leading" secondItem="fi4-kd-HqH" secondAttribute="leading" id="H0R-9O-DsH"/>
+                <constraint firstAttribute="trailing" secondItem="xIs-He-fGu" secondAttribute="trailing" id="dtN-Z7-94G"/>
+                <constraint firstItem="xIs-He-fGu" firstAttribute="top" secondItem="9zL-wo-EDo" secondAttribute="bottom" id="eYm-mf-JwD"/>
+                <constraint firstItem="9zL-wo-EDo" firstAttribute="leading" secondItem="fi4-kd-HqH" secondAttribute="leading" constant="16" id="wc8-aX-wBo"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="52.671755725190835" y="-204.57746478873241"/>
+        </view>
+    </objects>
+</document>

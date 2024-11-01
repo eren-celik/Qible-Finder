@@ -1,0 +1,963 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target x86_64-apple-ios18.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name kible_finder
+import AVFoundation
+import Alamofire
+import CoreLocation
+import DeveloperToolsSupport
+import Foundation
+import IQKeyboardManagerSwift
+import Kingfisher
+import MapKit
+import PanModal
+import Swift
+import SwiftUI
+import SwiftyUserDefaults
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_exported import kible_finder
+import netfox
+open class Endpoint : kible_finder.FLEndpoint {
+  public init(host: Swift.String? = nil, path: Swift.String = "", encoding: kible_finder.FLParameterEncoding = .jsonEncoding, parameters: Alamofire.Parameters? = nil, body: Swift.String? = nil, method: Alamofire.HTTPMethod = .get, headers: Alamofire.HTTPHeaders? = nil)
+  @objc deinit
+}
+public class NamazService {
+  public static let shared: kible_finder.NamazService
+  public init()
+  public func showNamazUI(forWindowScene windowScene: UIKit.UIWindowScene, closeHandler: (() -> Swift.Void)? = nil)
+  public func closeNamazUI()
+  @objc deinit
+}
+public enum FLParameterEncoding {
+  case urlEncoding
+  case jsonEncoding
+  case urlEncodingBody
+  public static func == (a: kible_finder.FLParameterEncoding, b: kible_finder.FLParameterEncoding) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Retrieve {
+  func retrieve<T>() async throws -> T where T : Swift.Decodable
+}
+open class FLEndpoint : kible_finder.Retrieve {
+  open var host: Swift.String
+  open var path: Swift.String
+  open var encoding: kible_finder.FLParameterEncoding
+  open var parameters: Alamofire.Parameters?
+  open var body: Swift.String?
+  open var method: Alamofire.HTTPMethod
+  open var headers: Alamofire.HTTPHeaders
+  public init(path: Swift.String = "", encoding: kible_finder.FLParameterEncoding = .jsonEncoding, parameters: Alamofire.Parameters? = nil, body: Swift.String? = nil, method: Alamofire.HTTPMethod = .get, headers: Alamofire.HTTPHeaders = .default)
+  @objc deinit
+}
+extension kible_finder.FLEndpoint {
+  public func retrieve<T>() async throws -> T where T : Swift.Decodable
+}
+public class TabBarCoordinator : kible_finder.BaseCoordinator {
+  public init(window: UIKit.UIWindow)
+  override public func start()
+  @objc deinit
+}
+public enum Font {
+  public struct FType : kible_finder.FontTypeProtocol {
+    public static var extraLight: Swift.String {
+      get
+    }
+    public static var light: Swift.String {
+      get
+    }
+    public static var regular: Swift.String {
+      get
+    }
+    public static var medium: Swift.String {
+      get
+    }
+    public static var semiBold: Swift.String {
+      get
+    }
+    public static var bold: Swift.String {
+      get
+    }
+    public static var extraBold: Swift.String {
+      get
+    }
+  }
+  public enum Size : CoreFoundation.CGFloat {
+    case s12
+    case s14
+    case s16
+    case s18
+    case s20
+    case s24
+    case s32
+    case s40
+    case s42
+    case s44
+    case s48
+    public init?(rawValue: CoreFoundation.CGFloat)
+    public typealias RawValue = CoreFoundation.CGFloat
+    public var rawValue: CoreFoundation.CGFloat {
+      get
+    }
+  }
+  public static func configure()
+  public static func checkFonts()
+}
+extension UIKit.UIFont {
+  public class func extraLight(_ size: kible_finder.Font.Size) -> UIKit.UIFont
+  public class func light(_ size: kible_finder.Font.Size) -> UIKit.UIFont
+  public class func regular(_ size: kible_finder.Font.Size) -> UIKit.UIFont
+  public class func medium(_ size: kible_finder.Font.Size) -> UIKit.UIFont
+  public class func semiBold(_ size: kible_finder.Font.Size) -> UIKit.UIFont
+  public class func bold(_ size: kible_finder.Font.Size) -> UIKit.UIFont
+  public class func extraBold(_ size: kible_finder.Font.Size) -> UIKit.UIFont
+  public class var xs4ExtraLight: UIKit.UIFont {
+    get
+  }
+  public class var xs4Light: UIKit.UIFont {
+    get
+  }
+  public class var xs4Regular: UIKit.UIFont {
+    get
+  }
+  public class var xs4Medium: UIKit.UIFont {
+    get
+  }
+  public class var xs4SemiBold: UIKit.UIFont {
+    get
+  }
+  public class var xs4Bold: UIKit.UIFont {
+    get
+  }
+  public class var xs4ExtraBold: UIKit.UIFont {
+    get
+  }
+  public class var xs3ExtraLight: UIKit.UIFont {
+    get
+  }
+  public class var xs3Light: UIKit.UIFont {
+    get
+  }
+  public class var xs3Regular: UIKit.UIFont {
+    get
+  }
+  public class var xs3Medium: UIKit.UIFont {
+    get
+  }
+  public class var xs3SemiBold: UIKit.UIFont {
+    get
+  }
+  public class var xs3Bold: UIKit.UIFont {
+    get
+  }
+  public class var xs3ExtraBold: UIKit.UIFont {
+    get
+  }
+  public class var xs2ExtraLight: UIKit.UIFont {
+    get
+  }
+  public class var xs2Light: UIKit.UIFont {
+    get
+  }
+  public class var xs2Regular: UIKit.UIFont {
+    get
+  }
+  public class var xs2Medium: UIKit.UIFont {
+    get
+  }
+  public class var xs2SemiBold: UIKit.UIFont {
+    get
+  }
+  public class var xs2Bold: UIKit.UIFont {
+    get
+  }
+  public class var xs2ExtraBold: UIKit.UIFont {
+    get
+  }
+  public class var xsExtraLight: UIKit.UIFont {
+    get
+  }
+  public class var xsLight: UIKit.UIFont {
+    get
+  }
+  public class var xsRegular: UIKit.UIFont {
+    get
+  }
+  public class var xsMedium: UIKit.UIFont {
+    get
+  }
+  public class var xsSemiBold: UIKit.UIFont {
+    get
+  }
+  public class var xsBold: UIKit.UIFont {
+    get
+  }
+  public class var xsExtraBold: UIKit.UIFont {
+    get
+  }
+  public class var smExtraLight: UIKit.UIFont {
+    get
+  }
+  public class var smLight: UIKit.UIFont {
+    get
+  }
+  public class var smRegular: UIKit.UIFont {
+    get
+  }
+  public class var smMedium: UIKit.UIFont {
+    get
+  }
+  public class var smSemiBold: UIKit.UIFont {
+    get
+  }
+  public class var smBold: UIKit.UIFont {
+    get
+  }
+  public class var smExtraBold: UIKit.UIFont {
+    get
+  }
+  public class var mdExtraLight: UIKit.UIFont {
+    get
+  }
+  public class var mdLight: UIKit.UIFont {
+    get
+  }
+  public class var mdRegular: UIKit.UIFont {
+    get
+  }
+  public class var mdMedium: UIKit.UIFont {
+    get
+  }
+  public class var mdSemiBold: UIKit.UIFont {
+    get
+  }
+  public class var mdBold: UIKit.UIFont {
+    get
+  }
+  public class var mdExtraBold: UIKit.UIFont {
+    get
+  }
+  public class var lgExtraLight: UIKit.UIFont {
+    get
+  }
+  public class var lgLight: UIKit.UIFont {
+    get
+  }
+  public class var lgRegular: UIKit.UIFont {
+    get
+  }
+  public class var lgMedium: UIKit.UIFont {
+    get
+  }
+  public class var lgSemiBold: UIKit.UIFont {
+    get
+  }
+  public class var lgBold: UIKit.UIFont {
+    get
+  }
+  public class var lgExtraBold: UIKit.UIFont {
+    get
+  }
+  public class var xlExtraLight: UIKit.UIFont {
+    get
+  }
+  public class var xlLight: UIKit.UIFont {
+    get
+  }
+  public class var xlRegular: UIKit.UIFont {
+    get
+  }
+  public class var xlMedium: UIKit.UIFont {
+    get
+  }
+  public class var xlSemiBold: UIKit.UIFont {
+    get
+  }
+  public class var xlBold: UIKit.UIFont {
+    get
+  }
+  public class var xlExtraBold: UIKit.UIFont {
+    get
+  }
+  public class var xl4Bold: UIKit.UIFont {
+    get
+  }
+}
+extension UIKit.UIImage {
+  convenience public init?(color: UIKit.UIColor, size: CoreFoundation.CGSize)
+}
+extension SwiftyUserDefaults.DefaultsSerializable where Self : Swift.Decodable, Self : Swift.Encodable {
+  public typealias Bridge = SwiftyUserDefaults.DefaultsCodableBridge<Self>
+  public typealias ArrayBridge = SwiftyUserDefaults.DefaultsCodableBridge<[Self]>
+}
+extension SwiftyUserDefaults.DefaultsSerializable where Self : Swift.RawRepresentable {
+  public typealias Bridge = SwiftyUserDefaults.DefaultsRawRepresentableBridge<Self>
+  public typealias ArrayBridge = SwiftyUserDefaults.DefaultsRawRepresentableArrayBridge<[Self]>
+}
+public protocol NavigationCoordinatorProtocol {
+  func goToBack(with animation: Swift.Bool)
+}
+extension kible_finder.NavigationCoordinatorProtocol where Self : kible_finder.BaseCoordinator {
+  public func goToBack(with animation: Swift.Bool = true)
+}
+public protocol PanModalProtocol : PanModal.PanModalPresentable {
+}
+extension kible_finder.PanModalProtocol {
+  public var cornerRadius: CoreFoundation.CGFloat {
+    get
+  }
+  public var allowsDragToDismiss: Swift.Bool {
+    get
+  }
+}
+public protocol BaseErrorDisplayProtocol {
+  func display(error: any Swift.Error)
+}
+extension kible_finder.BaseErrorDisplayProtocol {
+  public func display(error: any Swift.Error)
+}
+public protocol BaseDisplayProtocol : kible_finder.BaseErrorDisplayProtocol, kible_finder.BaseLoadingDisplayProtocol {
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class BaseNavigationController : UIKit.UINavigationController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @available(iOS 5.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension kible_finder.BaseNavigationController : UIKit.UINavigationControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func navigationController(_ navigationController: UIKit.UINavigationController, willShow viewController: UIKit.UIViewController, animated: Swift.Bool)
+}
+public protocol ButtonStringProtocol {
+  var yes: Swift.String { get }
+  var no: Swift.String { get }
+  var ok: Swift.String { get }
+  var cancel: Swift.String { get }
+  var share: Swift.String { get }
+  var all: Swift.String { get }
+  var delete: Swift.String { get }
+}
+extension kible_finder.ButtonStringProtocol {
+  public var yes: Swift.String {
+    get
+  }
+  public var no: Swift.String {
+    get
+  }
+  public var ok: Swift.String {
+    get
+  }
+  public var cancel: Swift.String {
+    get
+  }
+  public var share: Swift.String {
+    get
+  }
+  public var all: Swift.String {
+    get
+  }
+  public var delete: Swift.String {
+    get
+  }
+}
+public typealias UpdateLocationHandler = ((CoreLocation.CLLocation) -> Swift.Void)
+public enum DateType : Swift.String {
+  case yyyyMMdd
+  case ddMMyyyy
+  case ddMMyyyyHHmmssWithSlash
+  case ddMMyyyyWithDot
+  case ddMMyyyyHHmm
+  case ddMMyyyyHHmmss
+  case d
+  case dd
+  case M
+  case MM
+  case MMM
+  case MMMM
+  case yyyy
+  case hh
+  case h_h
+  case hHmm
+  case yyyyMMddHHmmss
+  case yyyyMMddTHHmmss
+  case dd__mm__yyyy
+  case dd_mm_yyyy
+  case dd_MMMM_yyyy
+  case yyyyMMddTHHmmssSSSSSSZ
+  case yyyyMMddTHHmmssSSSZ
+  case yyyyMMddTHHmmssZ
+  case yyyyMMddTHHmmssSSS
+  case ddMMMM
+  case mm_yyyy
+  case yyyyMM
+  case yyMMdd
+  case ddMMM
+  case EEEE
+  case ddMMMHHmm
+  case ddMMMyyyy
+  case MMMyyyy
+  case YYYYMMDDZ
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol BaseModelProtocol : Swift.CustomStringConvertible, Swift.Decodable, Swift.Encodable {
+}
+extension kible_finder.BaseModelProtocol {
+  public var description: Swift.String {
+    get
+  }
+}
+public protocol BaseLoadingDisplayProtocol : AnyObject {
+  func startLoading()
+  func endLoading()
+}
+extension kible_finder.BaseLoadingDisplayProtocol where Self : UIKit.UIViewController {
+  public func startLoading()
+  public func endLoading()
+}
+extension kible_finder.BaseLoadingDisplayProtocol where Self : UIKit.UIView {
+  public func startLoading()
+  public func endLoading()
+}
+public protocol LocationStringProtocol {
+  var deniedAuthRequestMessage: Swift.String { get }
+}
+extension kible_finder.LocationStringProtocol {
+  public var authRequestMessage: Swift.String {
+    get
+  }
+  public var deniedAuthRequestMessage: Swift.String {
+    get
+  }
+}
+extension Foundation.Bundle {
+  public static let namaz: Foundation.Bundle?
+}
+public protocol NavigationBarProtocol {
+  func setLeftTitle(_ text: Swift.String?, font: UIKit.UIFont)
+  func setRightButton(clickAction: ObjectiveC.Selector, icon: Swift.String)
+  func setLeftButton(clickAction: ObjectiveC.Selector, icon: Swift.String)
+  func setRightCustomView(clickAction: ObjectiveC.Selector, view: UIKit.UIView)
+}
+public protocol MenuStringProtocol {
+  var prayerTime: Swift.String { get }
+  var qible: Swift.String { get }
+  var mosque: Swift.String { get }
+  var pray: Swift.String { get }
+  var quran: Swift.String { get }
+  var calendar: Swift.String { get }
+  var names: Swift.String { get }
+  var dhikr: Swift.String { get }
+  var hadith: Swift.String { get }
+  var messages: Swift.String { get }
+}
+extension kible_finder.MenuStringProtocol {
+  public var prayerTime: Swift.String {
+    get
+  }
+  public var qible: Swift.String {
+    get
+  }
+  public var mosque: Swift.String {
+    get
+  }
+  public var pray: Swift.String {
+    get
+  }
+  public var quran: Swift.String {
+    get
+  }
+  public var calendar: Swift.String {
+    get
+  }
+  public var names: Swift.String {
+    get
+  }
+  public var dhikr: Swift.String {
+    get
+  }
+  public var hadith: Swift.String {
+    get
+  }
+  public var messages: Swift.String {
+    get
+  }
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor @preconcurrency public func setAttributedText(mainText: Swift.String, mainFont: UIKit.UIFont, mainColor: UIKit.UIColor, secondaryText: Swift.String, secondaryFont: UIKit.UIFont, secondaryColor: UIKit.UIColor)
+}
+public protocol FLBaseStyleProtocol {
+  var font: UIKit.UIFont? { get set }
+  var textColor: UIKit.UIColor? { get set }
+  var tintColor: UIKit.UIColor { get set }
+  var backgroundColor: UIKit.UIColor? { get set }
+  var borderColor: UIKit.UIColor? { get set }
+  var borderWidth: CoreFoundation.CGFloat { get set }
+  var cornerRadius: CoreFoundation.CGFloat { get set }
+  var alignment: UIKit.NSTextAlignment? { get set }
+}
+public protocol RoundableViewProtocol {
+  var cornerRadius: CoreFoundation.CGFloat { get set }
+  var borderWidth: CoreFoundation.CGFloat { get set }
+  var borderColor: UIKit.UIColor? { get set }
+}
+public protocol FLLabelStyleProtocol : kible_finder.FLBaseStyleProtocol {
+  var text: Swift.String? { get set }
+  var font: UIKit.UIFont? { get set }
+  var textColor: UIKit.UIColor? { get set }
+  var tintColor: UIKit.UIColor { get set }
+  var backgroundColor: UIKit.UIColor? { get set }
+  var borderColor: UIKit.UIColor? { get set }
+  var borderWidth: CoreFoundation.CGFloat { get set }
+  var cornerRadius: CoreFoundation.CGFloat { get set }
+  var textPadding: UIKit.UIEdgeInsets? { get set }
+  var alignment: UIKit.NSTextAlignment? { get set }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class FLLabel : UIKit.UILabel {
+  @_Concurrency.MainActor @preconcurrency open func configure(with viewModel: any kible_finder.FLLabelStyleProtocol)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func drawText(in rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class FLTableViewCell : UIKit.UITableViewCell, kible_finder.ReusableViewProtocol, kible_finder.NibLoadableViewProtocol {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func awakeFromNib()
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor @preconcurrency public func safeScrollToItem(at indexPath: Foundation.IndexPath, at scrollPosition: UIKit.UICollectionView.ScrollPosition, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func register<T>(_: T.Type) where T : UIKit.UICollectionViewCell, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func register<T>(_: T.Type) where T : UIKit.UICollectionViewCell, T : kible_finder.NibLoadableViewProtocol, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func registerHeader<T>(_: T.Type) where T : UIKit.UICollectionReusableView, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func registerFooter<T>(_: T.Type) where T : UIKit.UICollectionReusableView, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func dequeueReusableCell<T>(for indexPath: Foundation.IndexPath) -> T where T : UIKit.UICollectionViewCell, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func dequeueReusableCell<T>(for indexPath: Foundation.IndexPath, type: T.Type) -> T where T : UIKit.UICollectionViewCell, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func dequeueReusableSupplementaryView<T>(ofKind elementKind: Swift.String, for indexPath: Foundation.IndexPath, type: T.Type) -> T where T : UIKit.UICollectionReusableView, T : kible_finder.ReusableViewProtocol
+}
+public protocol CoordinatorProtocol {
+  var navigationController: UIKit.UINavigationController { get }
+  var tabBarController: UIKit.UITabBarController? { get }
+  func start()
+}
+open class BaseCoordinator : kible_finder.CoordinatorProtocol {
+  public var navigationController: UIKit.UINavigationController
+  public var tabBarController: UIKit.UITabBarController?
+  open func start()
+  public init()
+  public init(with navigationController: UIKit.UINavigationController)
+  public init(with navigationController: UIKit.UINavigationController, tabBarController: UIKit.UITabBarController? = nil)
+  @objc deinit
+}
+extension UIKit.UITextField {
+  @_Concurrency.MainActor @preconcurrency public func clear()
+  @_Concurrency.MainActor @preconcurrency public func placeHolderTextColor(_ color: UIKit.UIColor?)
+  @_Concurrency.MainActor @preconcurrency public func addPaddingLeftIcon(_ image: UIKit.UIImage?, padding: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func addPaddingRightIcon(_ image: UIKit.UIImage?, padding: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func placeHolderText(_ color: UIKit.UIColor, font: UIKit.UIFont)
+}
+extension UIKit.UIStackView {
+  @_Concurrency.MainActor @preconcurrency public func removeAll()
+  @_Concurrency.MainActor @preconcurrency public func addArrangedSubviews(_ subviews: [UIKit.UIView])
+}
+extension UIKit.UIScrollView {
+  @_Concurrency.MainActor @preconcurrency public func scrollTo(horizontalPage: Swift.Int? = 0, verticalPage: Swift.Int? = 0, animated: Swift.Bool? = true)
+}
+extension UIKit.UITabBar {
+  @_Concurrency.MainActor @preconcurrency public func setColors(background: UIKit.UIColor? = nil, selectedBackground: UIKit.UIColor? = nil, item: UIKit.UIColor? = nil, selectedItem: UIKit.UIColor? = nil)
+}
+public protocol FontTypeProtocol {
+  static var light: Swift.String { get }
+  static var regular: Swift.String { get }
+  static var medium: Swift.String { get }
+  static var semiBold: Swift.String { get }
+  static var bold: Swift.String { get }
+}
+public protocol FontSizeProtocol {
+  static var size8: CoreFoundation.CGFloat { get }
+  static var size10: CoreFoundation.CGFloat { get }
+  static var size12: CoreFoundation.CGFloat { get }
+  static var size14: CoreFoundation.CGFloat { get }
+  static var size16: CoreFoundation.CGFloat { get }
+  static var size20: CoreFoundation.CGFloat { get }
+}
+extension UIKit.UIFont {
+  public class func font(type: Swift.String, _ size: CoreFoundation.CGFloat) -> UIKit.UIFont
+}
+extension UIKit.UIColor {
+  convenience public init?(hexString: Swift.String)
+}
+public protocol NibLoadableViewProtocol {
+  static var nibName: Swift.String { get }
+  var typeName: Swift.String { get }
+  static var bundle: Foundation.Bundle? { get }
+}
+extension kible_finder.NibLoadableViewProtocol where Self : UIKit.UIView {
+  public static var nibName: Swift.String {
+    get
+  }
+  public var typeName: Swift.String {
+    get
+  }
+  public static var bundle: Foundation.Bundle? {
+    get
+  }
+}
+extension kible_finder.NibLoadableViewProtocol where Self : UIKit.UIViewController {
+  public static var nibName: Swift.String {
+    get
+  }
+  public var typeName: Swift.String {
+    get
+  }
+  public static var bundle: Foundation.Bundle? {
+    get
+  }
+}
+extension UIKit.UIViewController : kible_finder.NibLoadableViewProtocol {
+}
+public typealias VoidHandler = (() -> Swift.Void)
+public typealias BoolHandler = ((Swift.Bool) -> Swift.Void)
+public typealias BoolErrorHandler = ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)
+public typealias OptionalBoolHandler = ((Swift.Bool?) -> Swift.Void)
+public typealias StringHandler = ((Swift.String) -> Swift.Void)
+public typealias OptionalStringHandler = ((Swift.String?) -> Swift.Void)
+public typealias IntHandler = ((Swift.Int) -> Swift.Void)
+public typealias OptionalIntHandler = ((Swift.Int?) -> Swift.Void)
+public typealias FloatHandler = ((Swift.Float) -> Swift.Void)
+public typealias OptionalFloatHandler = ((Swift.Float?) -> Swift.Void)
+public typealias DoubleHandler = ((Swift.Double) -> Swift.Void)
+public typealias OptionalDoubleHandler = ((Swift.Double?) -> Swift.Void)
+public typealias DateHandler = ((Foundation.Date) -> Swift.Void)
+public typealias OptionalDateHandler = ((Foundation.Date?) -> Swift.Void)
+extension Swift.Encodable {
+  public var toDictionary: [Swift.String : Any]? {
+    get
+  }
+  public var toJsonString: Swift.String? {
+    get
+  }
+}
+extension Foundation.Data {
+  public var toDictionary: [Swift.String : Any]? {
+    get
+  }
+  public var toString: Swift.String {
+    get
+  }
+  public var toHex: Swift.String {
+    get
+  }
+}
+extension Swift.FloatingPoint {
+  public var whole: Self {
+    get
+  }
+  public var fraction: Self {
+    get
+  }
+}
+extension Swift.Array where Element : Swift.Equatable {
+  public func unique<T>(by: ((Element) -> (T))) -> [Element] where T : Swift.Hashable
+}
+extension Foundation.Locale {
+  public var is12HourTimeFormat: Swift.Bool {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class Button : kible_finder.FLButton {
+  @_Concurrency.MainActor @preconcurrency public func configure(with viewModel: kible_finder.Button.ViewModel = .init())
+  public enum Style {
+    case blue
+    case white
+    case clear
+    case gray
+    case grayBlack
+    case whiteBlack
+    case clearWhite
+    case clearRed
+    case disable
+    public static func == (a: kible_finder.Button.Style, b: kible_finder.Button.Style) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension kible_finder.Button {
+  public struct ViewModel : kible_finder.FLButtonStyleProtocol {
+    public var title: Swift.String?
+    public var font: UIKit.UIFont?
+    public var textColor: UIKit.UIColor?
+    public var tintColor: UIKit.UIColor
+    public var backgroundColor: UIKit.UIColor?
+    public var borderColor: UIKit.UIColor?
+    public var borderWidth: CoreFoundation.CGFloat
+    public var cornerRadius: CoreFoundation.CGFloat
+    public var leftIcon: UIKit.UIImage?
+    public var rightIcon: UIKit.UIImage?
+    public var textInset: UIKit.UIEdgeInsets?
+    public var iconInset: UIKit.UIEdgeInsets?
+    public var alignment: UIKit.NSTextAlignment?
+    public var action: kible_finder.VoidHandler?
+    public init(style: kible_finder.Button.Style = .blue, title: Swift.String? = nil, font: UIKit.UIFont? = nil, textColor: UIKit.UIColor? = .black, tintColor: UIKit.UIColor = .black, backgroundColor: UIKit.UIColor? = .clear, borderColor: UIKit.UIColor? = nil, borderWidth: CoreFoundation.CGFloat = 0, cornerRadius: CoreFoundation.CGFloat = 0, leftIcon: UIKit.UIImage? = nil, rightIcon: UIKit.UIImage? = nil, textInset: UIKit.UIEdgeInsets? = nil, iconInset: UIKit.UIEdgeInsets? = nil, alignment: UIKit.NSTextAlignment? = .center, action: kible_finder.VoidHandler? = nil)
+  }
+}
+extension Foundation.Date {
+  public func toString(format: Swift.String = "MMMM dd yyyy") -> Swift.String
+  public func toHijriDateString(format: Swift.String = "dd MMMM yyyy") -> Swift.String?
+  public func days(between otherDate: Foundation.Date) -> Swift.Int
+  public func localizedString(timezone: Swift.String?, dateStyle: Foundation.DateFormatter.Style = .short, timeStyle: Foundation.DateFormatter.Style = .long) -> Swift.String
+  public func dateForTimezone(_ timezone: Swift.String?) -> Foundation.Date
+  public func add(years: Swift.Int = 0, months: Swift.Int = 0, days: Swift.Int = 0, hours: Swift.Int = 0, minutes: Swift.Int = 0, seconds: Swift.Int = 0) -> Foundation.Date
+  public func getCurrentTimeNormalized(from startTimeString: Swift.String, to endTimeString: Swift.String) -> Swift.Double?
+}
+extension Swift.Int {
+  public var toString: Swift.String {
+    get
+  }
+  public var toDouble: Swift.Double {
+    get
+  }
+  public var toHex: Swift.String {
+    get
+  }
+  public var digitCount: Swift.Int {
+    get
+  }
+}
+extension Swift.String {
+  public var trim: Swift.String {
+    get
+  }
+  public var toInt: Swift.Int {
+    get
+  }
+  public var toDouble: Swift.Double? {
+    get
+  }
+  public var encodedUrl: Swift.String? {
+    get
+  }
+  public func toDate(format: Swift.String) -> Foundation.Date
+  public func indices(of occurrence: Swift.String) -> [Swift.Int]
+  public func ranges(of searchString: Swift.String) -> [Swift.Range<Swift.String.Index>]
+}
+extension Swift.Range where Bound == Swift.String.Index {
+  public func nsRange<S>(in string: S) -> Foundation.NSRange where S : Swift.StringProtocol
+}
+public protocol StoryboardedProtocol {
+  static func instantiate(storyboardName: Swift.String, bundle: Foundation.Bundle) -> Self
+}
+extension kible_finder.StoryboardedProtocol where Self : UIKit.UIViewController {
+  public static func instantiate(storyboardName: Swift.String, bundle: Foundation.Bundle = .main) -> Self
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class FLCollectionView : UIKit.UICollectionView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, collectionViewLayout layout: UIKit.UICollectionViewLayout)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol FLButtonStyleProtocol : kible_finder.FLBaseStyleProtocol {
+  var title: Swift.String? { get set }
+  var font: UIKit.UIFont? { get set }
+  var textColor: UIKit.UIColor? { get set }
+  var backgroundColor: UIKit.UIColor? { get set }
+  var borderColor: UIKit.UIColor? { get set }
+  var borderWidth: CoreFoundation.CGFloat { get set }
+  var cornerRadius: CoreFoundation.CGFloat { get set }
+  var leftIcon: UIKit.UIImage? { get set }
+  var rightIcon: UIKit.UIImage? { get set }
+  var textInset: UIKit.UIEdgeInsets? { get set }
+  var iconInset: UIKit.UIEdgeInsets? { get set }
+  var action: kible_finder.VoidHandler? { get set }
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency open class FLButton : UIKit.UIButton {
+  @_Concurrency.MainActor @preconcurrency open func configure(with viewModel: any kible_finder.FLButtonStyleProtocol)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor @preconcurrency public var text: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var textColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var font: UIKit.UIFont? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var image: UIKit.UIImage? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var selectedImage: UIKit.UIImage? {
+    get
+    set
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class FLCollectionViewCell : UIKit.UICollectionViewCell, kible_finder.ReusableViewProtocol, kible_finder.NibLoadableViewProtocol {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func scrollToBottom(isAnimated: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency public func safeScrollToRow(at indexPath: Foundation.IndexPath, at scrollPosition: UIKit.UITableView.ScrollPosition, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func hasRowAtIndexPath(indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func register<T>(_: T.Type) where T : UIKit.UITableViewCell, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func register<T>(headerFooterViewClassWith type: T.Type) where T : UIKit.UITableViewHeaderFooterView, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func register<T>(_: T.Type) where T : UIKit.UITableViewCell, T : kible_finder.NibLoadableViewProtocol, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func dequeueReusableCell<T>(for indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func dequeueReusableCell<T>(for indexPath: Foundation.IndexPath, type: T.Type) -> T where T : UIKit.UITableViewCell, T : kible_finder.ReusableViewProtocol
+  @_Concurrency.MainActor @preconcurrency public func dequeueReusableHeaderFooterView<T>(type: T.Type) -> T where T : UIKit.UITableViewHeaderFooterView, T : kible_finder.ReusableViewProtocol
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func setAndLayoutTableHeaderView(header: UIKit.UIView)
+}
+public protocol ReusableViewProtocol {
+  static var defaultReuseIdentifier: Swift.String { get }
+}
+extension kible_finder.ReusableViewProtocol where Self : UIKit.UIView {
+  public static var defaultReuseIdentifier: Swift.String {
+    get
+  }
+}
+extension UIKit.UIView {
+  public enum Corners {
+    case topLeft, topRight, bottomLeft, bottomRight
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor @preconcurrency convenience public init(backgroundColor: UIKit.UIColor)
+  @_Concurrency.MainActor @preconcurrency public static func loadFromNib() -> Self
+  @_Concurrency.MainActor @preconcurrency public func applyBorder(color: UIKit.UIColor, width: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func roundCorners(radius: CoreFoundation.CGFloat, corners: [UIKit.UIView.Corners] = [])
+  @_Concurrency.MainActor @preconcurrency public func roundCorners(radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func roundCorners(corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func border(color: UIKit.UIColor? = .black)
+  @_Concurrency.MainActor @preconcurrency public func border(width: CoreFoundation.CGFloat = 1)
+  @_Concurrency.MainActor @preconcurrency public func clearBorder()
+  @_Concurrency.MainActor @preconcurrency public func addShadow(color: UIKit.UIColor = .black, opacity: Swift.Float = 0.25, offset: CoreFoundation.CGSize = .zero, radius: CoreFoundation.CGFloat = 5)
+  @_Concurrency.MainActor @preconcurrency public func snapshot() -> UIKit.UIImage
+  @_Concurrency.MainActor @preconcurrency public func addBottomLine(_ color: UIKit.UIColor = .black)
+}
+extension UIKit.UIView : kible_finder.RoundableViewProtocol {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var cornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var borderWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+}
+extension UIKit.UIView : kible_finder.GradientableViewProtocol {
+  @_Concurrency.MainActor @preconcurrency public func gradientView(colors: [UIKit.UIColor], locations: [Foundation.NSNumber] = [0.0, 1.0])
+}
+extension UIKit.UIView.Corners : Swift.RawRepresentable {
+  public typealias RawValue = QuartzCore.CACornerMask
+  public init?(rawValue: QuartzCore.CACornerMask)
+  public var rawValue: QuartzCore.CACornerMask {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class FLGradientView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func setGradient(colors: [UIKit.UIColor], startPoint: CoreFoundation.CGPoint = CGPoint(x: 0, y: 0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 1, y: 1))
+  @objc deinit
+}
+extension UIKit.UIColor {
+  public static func gradientColor(colors: [UIKit.UIColor], size: CoreFoundation.CGSize, startPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 1)) -> UIKit.UIColor?
+}
+public protocol FLTextFieldStyleProtocol : kible_finder.FLBaseStyleProtocol {
+  var text: Swift.String? { get set }
+  var placeholder: Swift.String? { get set }
+  var font: UIKit.UIFont? { get set }
+  var textColor: UIKit.UIColor? { get set }
+  var placeholderTextColor: UIKit.UIColor? { get set }
+  var tintColor: UIKit.UIColor { get set }
+  var backgroundColor: UIKit.UIColor? { get set }
+  var borderStyle: UIKit.UITextField.BorderStyle? { get set }
+  var borderColor: UIKit.UIColor? { get set }
+  var borderWidth: CoreFoundation.CGFloat { get set }
+  var cornerRadius: CoreFoundation.CGFloat { get set }
+  var leftIcon: UIKit.UIImage? { get set }
+  var paddingLeftIcon: CoreFoundation.CGFloat? { get set }
+  var rightIcon: UIKit.UIImage? { get set }
+  var paddingRightIcon: CoreFoundation.CGFloat? { get set }
+  var textPadding: UIKit.UIEdgeInsets? { get set }
+  var alignment: UIKit.NSTextAlignment? { get set }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class FLTextField : UIKit.UITextField {
+  @_Concurrency.MainActor @preconcurrency open func configure(with viewModel: any kible_finder.FLTextFieldStyleProtocol)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func placeholderRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class FLTableView : UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var contentSize: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, style: UIKit.UITableView.Style)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol GradientableViewProtocol {
+  func gradientView(colors: [UIKit.UIColor], locations: [Foundation.NSNumber])
+}
+extension kible_finder.FLParameterEncoding : Swift.Equatable {}
+extension kible_finder.FLParameterEncoding : Swift.Hashable {}
+extension kible_finder.Font.Size : Swift.Equatable {}
+extension kible_finder.Font.Size : Swift.Hashable {}
+extension kible_finder.Font.Size : Swift.RawRepresentable {}
+extension kible_finder.DateType : Swift.Equatable {}
+extension kible_finder.DateType : Swift.Hashable {}
+extension kible_finder.DateType : Swift.RawRepresentable {}
+extension kible_finder.Button.Style : Swift.Equatable {}
+extension kible_finder.Button.Style : Swift.Hashable {}
+extension UIKit.UIView.Corners : Swift.Equatable {}
+extension UIKit.UIView.Corners : Swift.Hashable {}

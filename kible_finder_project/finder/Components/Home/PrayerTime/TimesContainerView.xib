@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimesContainerView" customModule="Namaz" customModuleProvider="target">
+            <connections>
+                <outlet property="stackView" destination="g7o-cW-Soj" id="uCx-fm-CM9"/>
+                <outlet property="view" destination="iN0-l3-epB" id="wGn-um-fGa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g7o-cW-Soj">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="g7o-cW-Soj" secondAttribute="bottom" id="a2c-Fr-nuu"/>
+                <constraint firstAttribute="trailing" secondItem="g7o-cW-Soj" secondAttribute="trailing" id="cyC-io-Qrt"/>
+                <constraint firstItem="g7o-cW-Soj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dgE-Dw-idR"/>
+                <constraint firstItem="g7o-cW-Soj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="leh-av-bxo"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="67.938931297709928" y="-191.19718309859155"/>
+        </view>
+    </objects>
+</document>

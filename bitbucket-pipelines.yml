@@ -1,0 +1,30 @@
+image: xcode:latest
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build and Update XCFramework
+          runs-on:
+            - self.hosted
+            - macos
+          script:
+            # iOS için arşiv oluşturma
+            - xcodebuild archive -project ./QiblaFinder/kible_finder_project/kible_finder.xcodeproj -scheme kible_finder -destination "generic/platform=iOS" -archivePath "./qible-finder-Archive"
+            
+            # iOS Simulator için arşiv oluşturma
+            - xcodebuild archive -project ./QiblaFinder/kible_finder_project/kible_finder.xcodeproj -scheme kible_finder -destination "generic/platform=iOS Simulator" -archivePath "./qible-finder-Archive_sim"
+            
+             # XCFramework oluşturma
+            - xcodebuild -create-xcframework -archive ./qible-finder-Archive.xcarchive -framework kible_finder.framework -archive ./qible-finder-Archive_sim.xcarchive -framework kible_finder.framework -output ./qible_finder.xcframework
+            
+            
+            # Mevcut XCFramework'ü güncelle
+            - rm -rf ./QiblaFinder/Framework/kible_finder.xcframework
+            - mv ./qible_finder.xcframework ./QiblaFinder/Framework/kible_finder.xcframework
+            
+
+            - git add ./QiblaFinder/Framework/kible_finder.xcframework
+            - git commit -m "Update XCFramework to the latest version"
+            - git tag -a "framework-update" -m "Update XCFramework to latest version"
+            - git push origin master

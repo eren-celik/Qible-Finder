@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="MosqueMapCell" customModule="Namaz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="412" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="412" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bos-ta-PiK">
+                        <rect key="frame" x="0.0" y="0.0" width="412" height="200"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="47G-c5-vMv">
+                                <rect key="frame" x="12" y="12" width="388" height="176"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="58n-1v-e6G">
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="88"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="55J-H3-voe">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="88" id="4ya-Ju-L5B"/>
+                                                    <constraint firstAttribute="height" constant="88" id="yhR-FF-A2F"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fD5-S1-0Hl">
+                                                <rect key="frame" x="104" y="0.0" width="284" height="88"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjA-s9-88E" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNo-9i-EBb" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="44" width="284" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="GkN-Nd-2NE">
+                                        <rect key="frame" x="0.0" y="134" width="388" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hih-fC-ycu" customClass="Button" customModule="Namaz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="188" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="tjE-q0-thu"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaB-Pu-b6C" customClass="Button" customModule="Namaz" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="188" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="UAw-JC-4G5"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="47G-c5-vMv" secondAttribute="trailing" constant="12" id="45y-zn-gbM"/>
+                            <constraint firstItem="47G-c5-vMv" firstAttribute="leading" secondItem="Bos-ta-PiK" secondAttribute="leading" constant="12" id="FA0-9B-FX9"/>
+                            <constraint firstAttribute="bottom" secondItem="47G-c5-vMv" secondAttribute="bottom" constant="12" id="QFE-fG-dSs"/>
+                            <constraint firstItem="47G-c5-vMv" firstAttribute="top" secondItem="Bos-ta-PiK" secondAttribute="top" constant="12" id="gRa-3B-mLK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Bos-ta-PiK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QnS-z8-ccJ"/>
+                <constraint firstItem="Bos-ta-PiK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hiK-m6-mme"/>
+                <constraint firstAttribute="trailing" secondItem="Bos-ta-PiK" secondAttribute="trailing" id="iOe-Y0-Eqa"/>
+                <constraint firstAttribute="bottom" secondItem="Bos-ta-PiK" secondAttribute="bottom" id="wK3-k3-lnG"/>
+            </constraints>
+            <size key="customSize" width="412" height="103"/>
+            <connections>
+                <outlet property="addressLabel" destination="SNo-9i-EBb" id="izP-Y6-aU1"/>
+                <outlet property="bgView" destination="Bos-ta-PiK" id="xSC-Tq-gXF"/>
+                <outlet property="imageView" destination="55J-H3-voe" id="WIK-kH-gCH"/>
+                <outlet property="mosqueLabel" destination="HjA-s9-88E" id="4p7-pi-7T9"/>
+                <outlet property="routeButton" destination="Hih-fC-ycu" id="LSE-FS-5DW"/>
+                <outlet property="shareButton" destination="iaB-Pu-b6C" id="Rj9-I6-Rzz"/>
+            </connections>
+            <point key="canvasLocation" x="348" y="82"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="Hih-fC-ycu">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="iaB-Pu-b6C">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

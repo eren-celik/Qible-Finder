@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionButtonView" customModule="Namaz" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="qJQ-U4-IuN" id="zaE-Sy-c3E"/>
+                <outlet property="checkboxButton" destination="6Wt-GH-qFM" id="Bfq-VG-9y6"/>
+                <outlet property="icon" destination="Uvq-cT-ed9" id="qMU-Pm-9hu"/>
+                <outlet property="iconContainerView" destination="f2f-Z5-UJL" id="p5Z-6v-D4W"/>
+                <outlet property="titleLabel" destination="dGZ-gr-fyn" id="iLL-Xu-YwF"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6JB-gr-YAb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJQ-U4-IuN">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5V-GK-HDS">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2f-Z5-UJL">
+                                    <rect key="frame" x="0.0" y="0.0" width="36" height="48"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_calendar_bell" translatesAutoresizingMaskIntoConstraints="NO" id="Uvq-cT-ed9">
+                                            <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="Ecp-J5-TER"/>
+                                                <constraint firstAttribute="height" constant="24" id="Uvh-l3-eC7"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Uvq-cT-ed9" secondAttribute="trailing" id="4Ea-sK-09G"/>
+                                        <constraint firstItem="Uvq-cT-ed9" firstAttribute="leading" secondItem="f2f-Z5-UJL" secondAttribute="leading" constant="12" id="9wc-yW-ndJ"/>
+                                        <constraint firstItem="Uvq-cT-ed9" firstAttribute="top" secondItem="f2f-Z5-UJL" secondAttribute="top" constant="12" id="Nbh-gs-5Gi"/>
+                                        <constraint firstAttribute="bottom" secondItem="Uvq-cT-ed9" secondAttribute="bottom" constant="12" id="goM-Js-64x"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcZ-Yf-l6h">
+                                    <rect key="frame" x="36" y="0.0" width="309" height="48"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGZ-gr-fyn" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                            <rect key="frame" x="12" y="0.0" width="297" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="dGZ-gr-fyn" secondAttribute="bottom" id="88P-OF-dVm"/>
+                                        <constraint firstItem="dGZ-gr-fyn" firstAttribute="top" secondItem="NcZ-Yf-l6h" secondAttribute="top" id="O12-sG-jKN"/>
+                                        <constraint firstAttribute="trailing" secondItem="dGZ-gr-fyn" secondAttribute="trailing" id="bRW-la-3re"/>
+                                        <constraint firstItem="dGZ-gr-fyn" firstAttribute="leading" secondItem="NcZ-Yf-l6h" secondAttribute="leading" constant="12" id="mIL-Je-PJu"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0h-P9-n51">
+                                    <rect key="frame" x="345" y="0.0" width="48" height="48"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wt-GH-qFM" customClass="Button" customModule="Namaz" customModuleProvider="target">
+                                            <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="Qix-S5-5ue"/>
+                                                <constraint firstAttribute="height" constant="24" id="aMF-XN-uN3"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="icon_checkbox"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="6Wt-GH-qFM" secondAttribute="trailing" constant="12" id="54T-XM-WKk"/>
+                                        <constraint firstItem="6Wt-GH-qFM" firstAttribute="leading" secondItem="Z0h-P9-n51" secondAttribute="leading" constant="12" id="XS0-ew-hHm"/>
+                                        <constraint firstItem="6Wt-GH-qFM" firstAttribute="top" secondItem="Z0h-P9-n51" secondAttribute="top" constant="12" id="dMw-gH-W5h"/>
+                                        <constraint firstAttribute="bottom" secondItem="6Wt-GH-qFM" secondAttribute="bottom" constant="12" id="kPR-XW-MP2"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="white-base"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="C5R-mR-7Kb"/>
+                        <constraint firstAttribute="bottom" secondItem="b5V-GK-HDS" secondAttribute="bottom" id="CEN-PJ-QKt"/>
+                        <constraint firstItem="b5V-GK-HDS" firstAttribute="top" secondItem="qJQ-U4-IuN" secondAttribute="top" id="e4y-7M-Utm"/>
+                        <constraint firstItem="b5V-GK-HDS" firstAttribute="leading" secondItem="qJQ-U4-IuN" secondAttribute="leading" id="nAg-bB-tB1"/>
+                        <constraint firstAttribute="trailing" secondItem="b5V-GK-HDS" secondAttribute="trailing" id="sQk-Vx-juK"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qJQ-U4-IuN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1I6-KA-0e5"/>
+                <constraint firstAttribute="trailing" secondItem="qJQ-U4-IuN" secondAttribute="trailing" id="6EY-GJ-dwU"/>
+                <constraint firstAttribute="bottom" secondItem="qJQ-U4-IuN" secondAttribute="bottom" id="Uyj-LI-zxE"/>
+                <constraint firstItem="qJQ-U4-IuN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sLX-0a-MXv"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="93.89312977099236" y="-174.64788732394368"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="6Wt-GH-qFM">
+            <size key="intrinsicContentSize" width="24" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icon_calendar_bell" width="24" height="24"/>
+        <image name="icon_checkbox" width="24" height="24"/>
+        <namedColor name="white-base">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

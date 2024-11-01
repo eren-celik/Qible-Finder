@@ -1,0 +1,6 @@
+framework module kible_finder {
+  umbrella header "kible_finder.h"
+  export *
+
+  module * { export * }
+}

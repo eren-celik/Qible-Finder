@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeCardView" customModule="Namaz" customModuleProvider="target">
+            <connections>
+                <outlet property="descLabel" destination="HDe-XQ-rAw" id="kyA-7b-cXq"/>
+                <outlet property="imageView" destination="haj-MJ-ntl" id="EwF-Ws-ONI"/>
+                <outlet property="shareButton" destination="ce6-vQ-ZCT" id="xgX-He-UPO"/>
+                <outlet property="titleLabelView" destination="UZa-dE-1bG" id="4nJ-ol-Y8g"/>
+                <outlet property="verseContainerView" destination="o9i-ZV-0bj" id="ObH-RQ-PbU"/>
+                <outlet property="verseLabel" destination="GAB-Gr-GE2" id="hEW-TU-OET"/>
+                <outlet property="view" destination="iN0-l3-epB" id="LaX-ji-qVe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="481"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="wuC-gx-zct">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="481"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Y3-P5-Dha">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZa-dE-1bG" customClass="TitleLabelView" customModule="Namaz" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="0.0" width="361" height="40"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="J0I-QG-MXJ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="UZa-dE-1bG" secondAttribute="trailing" constant="16" id="IAa-Yb-nNm"/>
+                                <constraint firstItem="UZa-dE-1bG" firstAttribute="leading" secondItem="6Y3-P5-Dha" secondAttribute="leading" constant="16" id="bXo-Tr-F71"/>
+                                <constraint firstAttribute="bottom" secondItem="UZa-dE-1bG" secondAttribute="bottom" id="eTF-aD-h6L"/>
+                                <constraint firstItem="UZa-dE-1bG" firstAttribute="top" secondItem="6Y3-P5-Dha" secondAttribute="top" id="zx1-Av-xDz"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTA-lH-BUm">
+                            <rect key="frame" x="0.0" y="88" width="393" height="393"/>
+                            <subviews>
+                                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2fV-kP-EjS">
+                                    <rect key="frame" x="16" y="0.0" width="361" height="393"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="haj-MJ-ntl">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="203"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="haj-MJ-ntl" secondAttribute="height" multiplier="16:9" id="6Dc-w6-UUM"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMS-Y4-oRG">
+                                            <rect key="frame" x="0.0" y="246" width="361" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDe-XQ-rAw" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="0.0" width="337" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="HDe-XQ-rAw" firstAttribute="leading" secondItem="wMS-Y4-oRG" secondAttribute="leading" constant="12" id="SFo-dQ-rGZ"/>
+                                                <constraint firstItem="HDe-XQ-rAw" firstAttribute="top" secondItem="wMS-Y4-oRG" secondAttribute="top" id="aG0-gs-L2u"/>
+                                                <constraint firstAttribute="bottom" secondItem="HDe-XQ-rAw" secondAttribute="bottom" id="rnG-pt-Rn9"/>
+                                                <constraint firstAttribute="trailing" secondItem="HDe-XQ-rAw" secondAttribute="trailing" constant="12" id="xAh-0m-fhG"/>
+                                            </constraints>
+                                        </view>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9i-ZV-0bj">
+                                            <rect key="frame" x="0.0" y="302" width="361" height="0.0"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAB-Gr-GE2" customClass="Label" customModule="Namaz" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="0.0" width="337" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="GAB-Gr-GE2" secondAttribute="bottom" id="Feg-Na-Woc"/>
+                                                <constraint firstItem="GAB-Gr-GE2" firstAttribute="leading" secondItem="o9i-ZV-0bj" secondAttribute="leading" constant="12" id="IG1-OD-DRz"/>
+                                                <constraint firstAttribute="trailing" secondItem="GAB-Gr-GE2" secondAttribute="trailing" constant="12" id="KH4-Cm-384"/>
+                                                <constraint firstItem="GAB-Gr-GE2" firstAttribute="top" secondItem="o9i-ZV-0bj" secondAttribute="top" id="Qrl-xS-nm2"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIE-w6-aY7">
+                                            <rect key="frame" x="0.0" y="339" width="361" height="54"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce6-vQ-ZCT" customClass="Button" customModule="Namaz" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="0.0" width="337" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="Ecx-MV-gNB"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="white-base"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="icon_share"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ce6-vQ-ZCT" secondAttribute="bottom" constant="12" id="9Gz-NB-eNr"/>
+                                                <constraint firstItem="ce6-vQ-ZCT" firstAttribute="leading" secondItem="KIE-w6-aY7" secondAttribute="leading" constant="12" id="V5b-ZB-FZw"/>
+                                                <constraint firstItem="ce6-vQ-ZCT" firstAttribute="top" secondItem="KIE-w6-aY7" secondAttribute="top" id="hes-Zz-tOe"/>
+                                                <constraint firstAttribute="trailing" secondItem="ce6-vQ-ZCT" secondAttribute="trailing" constant="12" id="uNN-g5-S10"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="2fV-kP-EjS" firstAttribute="leading" secondItem="HTA-lH-BUm" secondAttribute="leading" constant="16" id="07j-4E-fbK"/>
+                                <constraint firstItem="2fV-kP-EjS" firstAttribute="top" secondItem="HTA-lH-BUm" secondAttribute="top" id="0aI-KS-9XN"/>
+                                <constraint firstAttribute="trailing" secondItem="2fV-kP-EjS" secondAttribute="trailing" constant="16" id="HMr-ek-Ojh"/>
+                                <constraint firstAttribute="bottom" secondItem="2fV-kP-EjS" secondAttribute="bottom" id="oEe-07-zQT"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wuC-gx-zct" secondAttribute="bottom" id="BZ3-1i-vgb"/>
+                <constraint firstItem="wuC-gx-zct" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Odk-hI-7zC"/>
+                <constraint firstAttribute="trailing" secondItem="wuC-gx-zct" secondAttribute="trailing" id="bhC-8b-UFE"/>
+                <constraint firstItem="wuC-gx-zct" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dWu-6j-Ytr"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139.69465648854961" y="-110.91549295774648"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="ce6-vQ-ZCT">
+            <size key="intrinsicContentSize" width="18" height="22"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icon_share" width="18" height="18"/>
+        <namedColor name="white-base">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
