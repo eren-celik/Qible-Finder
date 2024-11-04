@@ -1,0 +1,42 @@
+name: Swift CI/CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: 'latest'
+
+      - name: Archive for iOS
+        run: xcodebuild archive -project ./kible_finder_project/kible_finder.xcodeproj -scheme QiblaFinder -destination "generic/platform=iOS" -archivePath "./qible-finder-Archive"
+
+
+      - name: Archive for iOS Simulator
+        run: xcodebuild archive -project ./kible_finder_project/kible_finder.xcodeproj -scheme QiblaFinder -destination "generic/platform=iOS Simulator" -archivePath "./qible-finder-Archive_sim"
+
+      - name: Create XCFramework
+        run: xcodebuild -create-xcframework -archive ./qible-finder-Archive.xcarchive -framework kible_finder.framework -archive ./qible-finder-Archive_sim.xcarchive -framework kible_finder.framework -output ./qible_finder.xcframework
+
+      - name: Update XCFramework
+        run: |
+          rm -rf ./Framework/kible_finder.xcframework
+          mv ./qible_finder.xcframework ./Framework/kible_finder.xcframework
+      - name: Commit and Push XCFramework Update
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add ./Framework/kible_finder.xcframework
+          git commit -m "Update XCFramework to the latest version"
+          git tag -a "framework-update" -m "Update XCFramework to latest version"
+          git push origin master --tags
